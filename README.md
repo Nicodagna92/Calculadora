@@ -5,7 +5,7 @@ Este proyecto forma parte de mi aprendizaje en JavaScript y la idea es seguir me
 
 ---
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
 ### Funcionalidades actuales
 - Operaciones basicas:
@@ -28,7 +28,7 @@ Este proyecto forma parte de mi aprendizaje en JavaScript y la idea es seguir me
 
 ---
 
-## 🛠 Tecnologias utilizadas
+##  Tecnologias utilizadas
 
 - **HTML5**
 - **CSS3**
@@ -36,7 +36,7 @@ Este proyecto forma parte de mi aprendizaje en JavaScript y la idea es seguir me
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```bash
 Calculadora/
@@ -50,7 +50,7 @@ Calculadora/
 
 ---
 
-## 🎯 Objetivo del proyecto
+##  Objetivo del proyecto
 
 El objetivo de este proyecto es practicar:
 
@@ -62,7 +62,7 @@ El objetivo de este proyecto es practicar:
 
 ---
 
-## 📌 Mejoras futuras
+##  Mejoras futuras
 
 La idea de este proyecto es hacerlo crecer poco a poco a medida que siga aprendiendo JavaScript y mejorando mis habilidades como desarrollador.
 
