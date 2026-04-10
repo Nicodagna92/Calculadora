@@ -5,7 +5,7 @@ let operador = "";
 
 //! FUNCIONES 
 
-// *Agrega números o punto decimal al numeroActual
+// *Agrega numeros o punto decimal al numeroActual
 export function cargarNumero(numero) {
     if (numero === "." && numeroActual.includes(".")) {
         return;
@@ -15,7 +15,7 @@ export function cargarNumero(numero) {
 }
 
 
-// *Guarda el operador y prepara la calculadora para el siguiente número
+// *Guarda el operador y prepara la calculadora para el siguiente numero
 export function elegirOperador(operadorNuevo) {
     if (numeroActual === "") {
         return;
@@ -31,7 +31,7 @@ export function elegirOperador(operadorNuevo) {
 }
 
 
-// *Realiza el cálculo entre numeroAnterior y numeroActual
+// *Realiza el calculo entre numeroAnterior y numeroActual
 export function calcularResultado() {
     if (numeroAnterior === "" || numeroActual === "" || operador === "") {
         return;
@@ -54,7 +54,7 @@ export function calcularResultado() {
             pantallaResultado.textContent = "Error"
             limpiarTodo();
         }else {
-        resultado = num1 / num2
+        resultado = num1 / num2;
         }
     }
 
@@ -72,7 +72,7 @@ export function limpiarTodo() {
 }
 
 
-// *Borra el último carácter del numeroActual
+// *Borra el ultimo caracter del numeroActual
 export function borrarUltimo() {
     numeroActual = numeroActual.slice(0, -1);
 }
@@ -91,4 +91,14 @@ export function obtenerResultado() {
     }
 
     return numeroActual;
+}
+
+// *Cambia el signo del numeroActual
+export function cambiarSigno() {
+    if (numeroActual === "") {
+        return;
+    }
+    const num = Number(numeroActual);
+
+    numeroActual = (-num).toString();
 }

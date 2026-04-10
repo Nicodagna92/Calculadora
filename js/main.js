@@ -5,7 +5,8 @@ import {
     limpiarTodo,
     borrarUltimo,
     obtenerOperacion,
-    obtenerResultado
+    obtenerResultado,
+    cambiarSigno
 } from "./functions.js";
 
 
@@ -20,6 +21,8 @@ const botonesOperadores = document.querySelectorAll(".boton-operador");
 const btnClear = document.getElementById("btnClear");
 const btnBorrar = document.getElementById("btnBorrar");
 const btnIgual = document.getElementById("btnIgual");
+const btnAns = document.getElementById("btnAns")
+const btnSigno = document.getElementById("btnSigno")
 
 
 //! FUNCION PARA ACTUALIZAR LA PANTALLA
@@ -72,6 +75,12 @@ btnClear.addEventListener("click", () => {
 
 btnBorrar.addEventListener("click", () => {
     borrarUltimo();
+    actualizarPantalla();
+});
+
+//! EVENTOS DEL MAS/MENOS
+btnSigno.addEventListener("click", () => {
+    cambiarSigno();
     actualizarPantalla();
 });
 

@@ -22,8 +22,8 @@
     --sombra-principal: 0 20px 40px rgba(0, 0, 0, 0.35);
 
     /* Espaciado */
-    --padding-general: 1.5rem;
-    --gap-botones: 0.75rem;
+    --padding-general: 1rem;
+    --gap-botones: 8px;
 
     /* Tipografía */
     --fuente-principal: Arial, Helvetica, sans-serif;
@@ -142,7 +142,7 @@ body {
 .boton-igual {
     background-color: var(--color-igual);
     color: #fff;
-    grid-row: span 2;
+    grid-row: span 4;
 }
 
 
