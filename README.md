@@ -15,6 +15,7 @@ Este proyecto forma parte de mi aprendizaje en JavaScript y la idea es seguir me
   - Division
 - Boton de limpiar (`C`)
 - Boton de borrar ultimo caracter (`⌫`)
+- Boton de cambio de signo (`+/-`)
 - Soporte para numeros decimales
 - Interfaz limpia y moderna
 
