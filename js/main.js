@@ -6,7 +6,8 @@ import {
     borrarUltimo,
     obtenerOperacion,
     obtenerResultado,
-    cambiarSigno
+    cambiarSigno,
+    usarAns
 } from "./functions.js";
 
 
@@ -83,6 +84,12 @@ btnSigno.addEventListener("click", () => {
     cambiarSigno();
     actualizarPantalla();
 });
+
+//! EVENTOS DEL ANS
+btnAns.addEventListener("click", () => {
+    usarAns();
+    actualizarPantalla();
+})
 
 
 actualizarPantalla();

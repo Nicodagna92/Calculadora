@@ -1,6 +1,7 @@
 let numeroActual = "";
 let numeroAnterior = "";
 let operador = "";
+let ultimoResultado = "";
 
 
 //! FUNCIONES 
@@ -61,6 +62,15 @@ export function calcularResultado() {
     numeroActual = resultado.toString();
     numeroAnterior = "";
     operador = "";
+    ultimoResultado = numeroActual;
+}
+
+//* Toma como numero actual el ultimo resultado
+export function usarAns() {
+    if (ultimoResultado === "") {
+        return
+    };
+    numeroActual = ultimoResultado;
 }
 
 
