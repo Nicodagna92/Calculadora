@@ -16,13 +16,13 @@ Este proyecto forma parte de mi aprendizaje en JavaScript y la idea es seguir me
 - Boton de limpiar (`C`)
 - Boton de borrar ultimo caracter (`⌫`)
 - Boton de cambio de signo (`+/-`)
+- Boton `Ans` (ultimo resultado)
 - Soporte para numeros decimales
 - Interfaz limpia y moderna
 
 ### Funcionalidades planeadas
 - Potencia
 - Raiz cuadrada
-- Boton `Ans` (ultimo resultado)
 - Soporte para teclado
 - Mejor manejo de errores
 - Mejoras de diseño responsive
