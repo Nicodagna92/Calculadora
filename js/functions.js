@@ -2,12 +2,32 @@ let numeroActual = "";
 let numeroAnterior = "";
 let operador = "";
 let ultimoResultado = "";
+let operacionActual = "";
+let resultadoMostrado = false;
 
 
 //! FUNCIONES 
 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Agrega numeros o punto decimal al numeroActual
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// export function cargarNumero(numero) {
+//     operacionActual = "";
+//     if (numero === "." && numeroActual.includes(".")) {
+//         return;
+//     }
+
+//     numeroActual += numero;
+// }
 export function cargarNumero(numero) {
+    operacionActual = "";
+    if (resultadoMostrado) {
+        numeroActual = numero;
+        resultadoMostrado = false;
+        return;
+    }
+
     if (numero === "." && numeroActual.includes(".")) {
         return;
     }
@@ -15,9 +35,12 @@ export function cargarNumero(numero) {
     numeroActual += numero;
 }
 
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Guarda el operador y prepara la calculadora para el siguiente numero
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 export function elegirOperador(operadorNuevo) {
+    operacionActual = "";
     if (numeroActual === "") {
         return;
     }
@@ -26,13 +49,15 @@ export function elegirOperador(operadorNuevo) {
         calcularResultado();
     }
 
+    resultadoMostrado = false;
     operador = operadorNuevo;
     numeroAnterior = numeroActual;
     numeroActual = "";
 }
 
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Realiza el calculo entre numeroAnterior y numeroActual
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function calcularResultado() {
     if (numeroAnterior === "" || numeroActual === "" || operador === "") {
         return;
@@ -51,9 +76,9 @@ export function calcularResultado() {
         resultado = num1 * num2;
     } else if (operador === "/") {
         if(num2 === 0){
-            pantallaOperacion.textContent = "Imposible dividir por cero";
-            pantallaResultado.textContent = "Error"
             limpiarTodo();
+            numeroActual="Error"
+            return;
         }else {
         resultado = num1 / num2;
         }
@@ -63,9 +88,12 @@ export function calcularResultado() {
     numeroAnterior = "";
     operador = "";
     ultimoResultado = numeroActual;
+    resultadoMostrado = true;
 }
 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //* Toma como numero actual el ultimo resultado
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function usarAns() {
     if (ultimoResultado === "") {
         return
@@ -73,28 +101,37 @@ export function usarAns() {
     numeroActual = ultimoResultado;
 }
 
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Limpia toda la calculadora
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function limpiarTodo() {
     numeroActual = "";
     numeroAnterior = "";
     operador = "";
+    operacionActual = "";
+    resultadoMostrado = false;
 }
 
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Borra el ultimo caracter del numeroActual
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function borrarUltimo() {
     numeroActual = numeroActual.slice(0, -1);
 }
 
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Devuelve lo que se tiene que mostrar arriba
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function obtenerOperacion() {
+    if (operacionActual !== "") {
+        return operacionActual;
+    }
+
     return `${numeroAnterior} ${operador}`.trim();
 }
-
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Devuelve lo que se tiene que mostrar en la pantalla principal
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function obtenerResultado() {
     if (numeroActual === "") {
         return "0";
@@ -102,8 +139,9 @@ export function obtenerResultado() {
 
     return numeroActual;
 }
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Cambia el signo del numeroActual
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function cambiarSigno() {
     if (numeroActual === "") {
         return;
@@ -111,4 +149,20 @@ export function cambiarSigno() {
     const num = Number(numeroActual);
 
     numeroActual = (-num).toString();
+}
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//* Se calcula el cuadrado del numeroActual
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+export function calcularCuadrado() {
+    if (numeroActual === "") {
+        return
+    };
+
+    const num = Number(numeroActual);
+
+    const resultado = num ** 2;
+    operacionActual = `${numeroActual}²`;
+    numeroActual = resultado.toString();
+    ultimoResultado = numeroActual;
+    resultadoMostrado = true;
 }

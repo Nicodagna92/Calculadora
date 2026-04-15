@@ -7,7 +7,8 @@ import {
     obtenerOperacion,
     obtenerResultado,
     cambiarSigno,
-    usarAns
+    usarAns,
+    calcularCuadrado
 } from "./functions.js";
 
 
@@ -22,8 +23,9 @@ const botonesOperadores = document.querySelectorAll(".boton-operador");
 const btnClear = document.getElementById("btnClear");
 const btnBorrar = document.getElementById("btnBorrar");
 const btnIgual = document.getElementById("btnIgual");
-const btnAns = document.getElementById("btnAns")
-const btnSigno = document.getElementById("btnSigno")
+const btnAns = document.getElementById("btnAns");
+const btnSigno = document.getElementById("btnSigno");
+const btnCuadrado = document.getElementById("btnCuadrado")
 
 
 //! FUNCION PARA ACTUALIZAR LA PANTALLA
@@ -60,7 +62,6 @@ botonesOperadores.forEach((boton) => {
 btnIgual.addEventListener("click", () => {
     calcularResultado();
     actualizarPantalla();
-    limpiarTodo();
 });
 
 
@@ -89,7 +90,13 @@ btnSigno.addEventListener("click", () => {
 btnAns.addEventListener("click", () => {
     usarAns();
     actualizarPantalla();
-})
+});
+
+//! EVENTOS DEL CUADRADO
+btnCuadrado.addEventListener("click", () => {
+    calcularCuadrado();
+    actualizarPantalla();
+});
 
 
 actualizarPantalla();

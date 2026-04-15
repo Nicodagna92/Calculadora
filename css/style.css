@@ -127,22 +127,10 @@ body {
     transform: scale(0.97);
 }
 
-
-.boton-operador {
-    background-color: var(--color-operador);
-    color: #fff;
-}
-
-
-.boton-operador:hover {
-    background-color: var(--color-operador-hover);
-}
-
-
 .boton-igual {
     background-color: var(--color-igual);
     color: #fff;
-    grid-row: span 4;
+    grid-row: span 3;
 }
 
 
@@ -161,6 +149,23 @@ body {
     background-color: var(--color-funcion-hover);
 }
 
+.boton-operador {
+    background-color: var(--color-operador);
+    color: #fff;
+}
+
+
+.boton-operador:hover {
+    background-color: var(--color-operador-hover);
+}
+
+.boton-especial{
+    background-color: var(--color-operador);
+    color: #fff;
+}
+.boton-especial:hover{
+    background-color: var(--color-operador-hover);
+}
 
 .boton-cero {
     grid-column: span 2;
