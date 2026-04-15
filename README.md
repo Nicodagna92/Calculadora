@@ -17,6 +17,7 @@ Este proyecto forma parte de mi aprendizaje en JavaScript y la idea es seguir me
 - Boton de borrar ultimo caracter (`⌫`)
 - Boton de cambio de signo (`+/-`)
 - Boton `Ans` (ultimo resultado)
+- Calculo de cuadrados (`x²`)
 - Soporte para numeros decimales
 - Interfaz limpia y moderna
 
