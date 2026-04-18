@@ -12,14 +12,6 @@ let resultadoMostrado = false;
 // *Agrega numeros o punto decimal al numeroActual
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-// export function cargarNumero(numero) {
-//     operacionActual = "";
-//     if (numero === "." && numeroActual.includes(".")) {
-//         return;
-//     }
-
-//     numeroActual += numero;
-// }
 export function cargarNumero(numero) {
     operacionActual = "";
     if (resultadoMostrado) {
@@ -84,7 +76,10 @@ export function calcularResultado() {
         }
     }
 
-    numeroActual = resultado.toString();
+    const decimales = 6;
+    const factor = 10 ** decimales;
+
+    numeroActual = (Math.round(resultado * factor) / factor).toString();
     numeroAnterior = "";
     operador = "";
     ultimoResultado = numeroActual;
@@ -162,7 +157,35 @@ export function calcularCuadrado() {
 
     const resultado = num ** 2;
     operacionActual = `${numeroActual}²`;
-    numeroActual = resultado.toString();
+    const decimales = 6;
+    const factor = 10 ** decimales;
+
+    numeroActual = (Math.round(resultado * factor) / factor).toString();
+    ultimoResultado = numeroActual;
+    resultadoMostrado = true;
+}
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//* Se calcula la raiz cuadrada del numeroActual
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+export function calcularRaizCuadrada() {
+    if (numeroActual === "") {
+        return
+    };
+
+    const num = Number(numeroActual);
+    if(num<0){
+        limpiarTodo();
+        numeroActual="Error"
+        return; 
+    }
+    const resultado = num ** 0.5;
+    operacionActual = `√${numeroActual}`;
+    const decimales = 6;
+    const factor = 10 ** decimales;
+
+    numeroActual = (Math.round(resultado * factor) / factor).toString();
     ultimoResultado = numeroActual;
     resultadoMostrado = true;
 }

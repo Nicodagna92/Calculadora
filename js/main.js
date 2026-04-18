@@ -8,7 +8,8 @@ import {
     obtenerResultado,
     cambiarSigno,
     usarAns,
-    calcularCuadrado
+    calcularCuadrado,
+    calcularRaizCuadrada
 } from "./functions.js";
 
 
@@ -25,7 +26,8 @@ const btnBorrar = document.getElementById("btnBorrar");
 const btnIgual = document.getElementById("btnIgual");
 const btnAns = document.getElementById("btnAns");
 const btnSigno = document.getElementById("btnSigno");
-const btnCuadrado = document.getElementById("btnCuadrado")
+const btnCuadrado = document.getElementById("btnCuadrado");
+const btnRaiz = document.getElementById("btnRaiz");
 
 
 //! FUNCION PARA ACTUALIZAR LA PANTALLA
@@ -95,6 +97,12 @@ btnAns.addEventListener("click", () => {
 //! EVENTOS DEL CUADRADO
 btnCuadrado.addEventListener("click", () => {
     calcularCuadrado();
+    actualizarPantalla();
+});
+
+//! EVENTOS DE RAIZ
+btnRaiz.addEventListener("click", () => {
+    calcularRaizCuadrada();
     actualizarPantalla();
 });
 
