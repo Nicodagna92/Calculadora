@@ -17,13 +17,13 @@ Este proyecto forma parte de mi aprendizaje en JavaScript y la idea es seguir me
 - Boton de borrar ultimo caracter (`⌫`)
 - Boton de cambio de signo (`+/-`)
 - Boton `Ans` (ultimo resultado)
+- Raiz cuadrada (`√`)
 - Calculo de cuadrados (`x²`)
 - Soporte para numeros decimales
 - Interfaz limpia y moderna
 
 ### Funcionalidades planeadas
 - Potencia
-- Raiz cuadrada
 - Soporte para teclado
 - Mejor manejo de errores
 - Mejoras de diseño responsive
