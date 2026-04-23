@@ -11,7 +11,6 @@ let resultadoMostrado = false;
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Agrega numeros o punto decimal al numeroActual
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 export function cargarNumero(numero) {
     operacionActual = "";
     if (resultadoMostrado) {
@@ -27,10 +26,10 @@ export function cargarNumero(numero) {
     numeroActual += numero;
 }
 
+
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Guarda el operador y prepara la calculadora para el siguiente numero
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 export function elegirOperador(operadorNuevo) {
     operacionActual = "";
     if (numeroActual === "") {
@@ -46,6 +45,7 @@ export function elegirOperador(operadorNuevo) {
     numeroAnterior = numeroActual;
     numeroActual = "";
 }
+
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Realiza el calculo entre numeroAnterior y numeroActual
@@ -76,7 +76,7 @@ export function calcularResultado() {
         }
     }
 
-    const decimales = 6;
+    const decimales = 3;
     const factor = 10 ** decimales;
 
     numeroActual = (Math.round(resultado * factor) / factor).toString();
@@ -85,6 +85,7 @@ export function calcularResultado() {
     ultimoResultado = numeroActual;
     resultadoMostrado = true;
 }
+
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //* Toma como numero actual el ultimo resultado
@@ -95,6 +96,7 @@ export function usarAns() {
     };
     numeroActual = ultimoResultado;
 }
+
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Limpia toda la calculadora
@@ -107,12 +109,14 @@ export function limpiarTodo() {
     resultadoMostrado = false;
 }
 
+
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Borra el ultimo caracter del numeroActual
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function borrarUltimo() {
     numeroActual = numeroActual.slice(0, -1);
 }
+
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Devuelve lo que se tiene que mostrar arriba
@@ -124,6 +128,8 @@ export function obtenerOperacion() {
 
     return `${numeroAnterior} ${operador}`.trim();
 }
+
+
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Devuelve lo que se tiene que mostrar en la pantalla principal
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -134,6 +140,8 @@ export function obtenerResultado() {
 
     return numeroActual;
 }
+
+
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // *Cambia el signo del numeroActual
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -145,6 +153,8 @@ export function cambiarSigno() {
 
     numeroActual = (-num).toString();
 }
+
+
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //* Se calcula el cuadrado del numeroActual
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -157,7 +167,7 @@ export function calcularCuadrado() {
 
     const resultado = num ** 2;
     operacionActual = `${numeroActual}²`;
-    const decimales = 6;
+    const decimales = 3;
     const factor = 10 ** decimales;
 
     numeroActual = (Math.round(resultado * factor) / factor).toString();
@@ -168,7 +178,6 @@ export function calcularCuadrado() {
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //* Se calcula la raiz cuadrada del numeroActual
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 export function calcularRaizCuadrada() {
     if (numeroActual === "") {
         return
@@ -182,10 +191,11 @@ export function calcularRaizCuadrada() {
     }
     const resultado = num ** 0.5;
     operacionActual = `√${numeroActual}`;
-    const decimales = 6;
+    const decimales = 3;
     const factor = 10 ** decimales;
 
     numeroActual = (Math.round(resultado * factor) / factor).toString();
+
     ultimoResultado = numeroActual;
     resultadoMostrado = true;
 }

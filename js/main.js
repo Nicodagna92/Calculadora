@@ -107,4 +107,58 @@ btnRaiz.addEventListener("click", () => {
 });
 
 
+document.addEventListener("keydown", (event) => {
+    const key = event.key;
+    //Si accionEjecutada es true entonces actualiza la UI
+    let accionEjecutada = false;
+
+//numeros
+    if (key >= "0" && key <= "9") {
+        cargarNumero(key);
+        accionEjecutada = true;
+    }
+//punto
+    else if (key === ".") {
+        cargarNumero(".");
+        accionEjecutada = true;
+    }
+//operadores
+    else if (["+", "-", "*", "/"].includes(key)) {
+        elegirOperador(key);
+        accionEjecutada = true;
+    }
+//igual
+    else if (key === "Enter" || key === "=") {
+        event.preventDefault();
+        calcularResultado();
+        accionEjecutada = true;
+    }
+//borrar
+    else if (key === "Backspace" || key === "Delete") {
+        borrarUltimo();
+        accionEjecutada = true;
+    }
+//limpiar todo
+    else if (key === "Escape") {
+        limpiarTodo();
+        accionEjecutada = true;
+    }
+//con la "n" cambiamos el signo
+    else if (key.toLowerCase() === "n") {
+        cambiarSigno();
+        accionEjecutada = true;
+    }
+//con la "r" calculamos la raiz cuadrada
+    else if (key.toLowerCase() === "r") {
+        calcularRaizCuadrada();
+        accionEjecutada = true;
+}
+
+//actualizar UI solo si accion ejecutada es true
+    if (accionEjecutada) {
+        actualizarPantalla();
+    }
+});
+
+
 actualizarPantalla();
