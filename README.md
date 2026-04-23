@@ -19,12 +19,27 @@ Este proyecto forma parte de mi aprendizaje en JavaScript y la idea es seguir me
 - Boton `Ans` (ultimo resultado)
 - Raiz cuadrada (`√`)
 - Calculo de cuadrados (`x²`)
+- Soporte para teclado
 - Soporte para numeros decimales
 - Interfaz limpia y moderna
 
+---
+
+###  Soporte de teclado
+- Números (0–9)
+- Operadores (+, −, ×, ÷)
+- `Enter` o `=` → calcular resultado
+- `Backspace` / `Delete` → borrar último carácter
+- `Escape` → limpiar todo
+- `.` → agregar punto decimal
+- `N` → cambiar signo (+/−)
+- `R` → calcular raíz cuadrada
+
+
+---
+
 ### Funcionalidades planeadas
 - Potencia
-- Soporte para teclado
 - Mejor manejo de errores
 - Mejoras de diseño responsive
 
@@ -67,5 +82,11 @@ El objetivo de este proyecto es practicar:
 ##  Mejoras futuras
 
 La idea de este proyecto es hacerlo crecer poco a poco a medida que siga aprendiendo JavaScript y mejorando mis habilidades como desarrollador.
+
+---
+
+## Notas
+
+- Los resultados se redondean a 3 decimales. Se implementara a futuro la posibilidad de modificar la cantidad de decimales a mostrar.
 
 ---
