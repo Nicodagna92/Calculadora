@@ -14,6 +14,7 @@ import {
 
 
 //! SELECTORES
+const btnTema = document.getElementById("btnTema");
 
 const pantallaOperacion = document.getElementById("pantallaOperacion");
 const pantallaResultado = document.getElementById("pantallaResultado");
@@ -104,6 +105,16 @@ btnCuadrado.addEventListener("click", () => {
 btnRaiz.addEventListener("click", () => {
     calcularRaizCuadrada();
     actualizarPantalla();
+});
+
+//! EVENTOS BTN TEMA
+btnTema.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+
+    const esClaro = document.body.classList.contains("light");
+
+    // Cambiar icono
+    btnTema.textContent = esClaro ? "🌙" : "☀️";
 });
 
 
