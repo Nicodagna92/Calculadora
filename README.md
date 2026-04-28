@@ -1,59 +1,72 @@
-# Calculadora
+#  Calculadora Web
 
-Una aplicacion web de calculadora hecha con **HTML, CSS y JavaScript**.  
-Este proyecto forma parte de mi aprendizaje en JavaScript y la idea es seguir mejorandolo con nuevas funciones y mejoras de interfaz con el tiempo.
-
----
-
-##  Funcionalidades
-
-### Funcionalidades actuales
-- Operaciones basicas:
-  - Suma
-  - Resta
-  - Multiplicacion
-  - Division
-- Boton de limpiar (`C`)
-- Boton de borrar ultimo caracter (`⌫`)
-- Boton de cambio de signo (`+/-`)
-- Boton `Ans` (ultimo resultado)
-- Raiz cuadrada (`√`)
-- Calculo de cuadrados (`x²`)
-- Soporte para teclado
-- Soporte para numeros decimales
-- Interfaz limpia y moderna
+Aplicación de calculadora desarrollada con **HTML, CSS y JavaScript (Vanilla)**.
+Este proyecto forma parte de mi aprendizaje en JavaScript y está pensado para evolucionar progresivamente incorporando nuevas funcionalidades y mejoras de interfaz.
 
 ---
 
-###  Soporte de teclado
-- Números (0–9)
-- Operadores (+, −, ×, ÷)
-- `Enter` o `=` → calcular resultado
-- `Backspace` / `Delete` → borrar último carácter
-- `Escape` → limpiar todo
-- `.` → agregar punto decimal
-- `N` → cambiar signo (+/−)
-- `R` → calcular raíz cuadrada
+##  Demo en vivo
 
+Podés probar la aplicación directamente desde tu navegador:
+
+ [**Ver calculadora**](https://nicodagna92.github.io/Calculadora/)
+
+No requiere instalación.
 
 ---
 
-### Funcionalidades planeadas
-- Potencia
-- Mejor manejo de errores
-- Mejoras de diseño responsive
+##  Funcionalidades
+
+### ✅ Funcionalidades actuales
+
+* Operaciones básicas:
+
+  * Suma
+  * Resta
+  * Multiplicación
+  * División
+* Botón de limpiar (`C`)
+* Botón de borrar último carácter (`⌫`)
+* Cambio de signo (`+/-`)
+* Uso de resultado anterior (`Ans`)
+* Raíz cuadrada (`√`)
+* Cálculo de cuadrados (`x²`)
+* Soporte para números decimales
+* Soporte completo de teclado
+* Cambio de tema claro/oscuro 
+* Interfaz moderna y responsive
 
 ---
 
-##  Tecnologias utilizadas
+##  Soporte de teclado
 
-- **HTML5**
-- **CSS3**
-- **JavaScript (Vanilla JS)**
+* Números: `0–9`
+* Operadores: `+`, `−`, `×`, `÷`
+* `Enter` o `=` → calcular resultado
+* `Backspace` / `Delete` → borrar último carácter
+* `Escape` → limpiar todo
+* `.` → agregar punto decimal
+* `N` → cambiar signo (+/−)
+* `R` → calcular raíz cuadrada
 
 ---
 
-## Estructura del proyecto
+##  Tecnologías utilizadas
+
+* **HTML5**
+* **CSS3**
+
+  * Uso de variables CSS (custom properties)
+  * Diseño responsive
+* **JavaScript (Vanilla JS)**
+
+  * Manipulación del DOM
+  * Manejo de eventos
+  * Lógica de operaciones matemáticas
+
+---
+
+##  Estructura del proyecto
 
 ```bash
 Calculadora/
@@ -67,26 +80,34 @@ Calculadora/
 
 ---
 
-##  Objetivo del proyecto
+##  Objetivo del proyecto
 
-El objetivo de este proyecto es practicar:
+Este proyecto tiene como objetivo reforzar conceptos clave de desarrollo frontend:
 
-- Manipulacion del DOM
-- Funciones en JavaScript
-- Manejo de eventos
-- Organizacion del codigo
-- Desarrollo progresivo de un proyecto real
-
----
-
-##  Mejoras futuras
-
-La idea de este proyecto es hacerlo crecer poco a poco a medida que siga aprendiendo JavaScript y mejorando mis habilidades como desarrollador.
+* Manipulación del DOM
+* Organización del código
+* Separación de responsabilidades
+* Manejo de eventos
+* Desarrollo incremental de una aplicación real
 
 ---
 
-## Notas
+##  Funcionalidades planeadas
 
-- Los resultados se redondean a 3 decimales. Se implementara a futuro la posibilidad de modificar la cantidad de decimales a mostrar.
+* Operaciones de potencia
+* Configuración de cantidad de decimales
+* Mejoras en diseño responsive
 
 ---
+
+##  Notas
+
+* Actualmente los resultados se redondean a 3 decimales.
+* En futuras versiones se podrá configurar la precisión de los resultados.
+
+---
+
+##  Estado del proyecto
+
+En desarrollo activo — se seguirán agregando mejoras y nuevas funcionalidades.
+
