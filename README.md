@@ -17,7 +17,7 @@ No requiere instalación.
 
 ##  Funcionalidades
 
-### ✅ Funcionalidades actuales
+###  Funcionalidades actuales
 
 * Operaciones básicas:
 
